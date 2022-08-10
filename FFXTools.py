@@ -25,17 +25,17 @@ def check_if_white():
 
 
 def lightning_dodge():
-    last_is_white = False
     dodge_count = 0
-    while True:
+    while not keyboard.is_pressed('p'):
+        if keyboard.is_pressed('q'):
+            quit()
         is_white = check_if_white()
-        if is_white and not last_is_white:
+        if is_white:
             keyboard.press('c')
             time.sleep(KEYPRESS)
             keyboard.release('c')
             dodge_count += 1
             print(f"{dodge_count}")
-        last_is_white = is_white
 
 
 print("============================")
@@ -50,14 +50,10 @@ boosts = input("Do you want to have Boosts included in the script? (Type 'yes' o
 print("Press '1' to start Autobattler")
 print("Press '2' to start Yuna Party Heal")
 print("Press '3' to start  Lightning Dodger\n")
-print("Press 'P' to Pause.")
-print("Press 'Q' to Quit Program.")
 
+print("Hold 'Q' to Quit Program.")
 
-while not keyboard.is_pressed('q'):
-    if keyboard.is_pressed('q'):
-        quit()
-# AUTOBATTLER
+while True:
     if keyboard.is_pressed('1'):
         if boosts.upper() == "YES":
             keypress("f1")
@@ -65,14 +61,8 @@ while not keyboard.is_pressed('q'):
             keypress("f2")
             keypress("f3")
             keypress("f4")
-        while not keyboard.is_pressed('p'):
+        while True:
             if keyboard.is_pressed('q'):
-                if boosts.upper == "YES":
-                    keypress("f1")
-                    keypress("f2")
-                    keypress("f3")
-                    keypress("f3")
-                    keypress("f4")
                 quit()
             keyboard.press('c')
             keyboard.press('d')
@@ -81,7 +71,6 @@ while not keyboard.is_pressed('q'):
             keyboard.press('a')
             time.sleep(0.4)
             keyboard.release('a')
-# YUNA PARTY HEAL
     if keyboard.is_pressed('2'):
         keypress("v")
         keypress("s")
@@ -96,14 +85,10 @@ while not keyboard.is_pressed('q'):
             keypress("s")
         for back in range(3):
             keypress("x")
-# LIGHTNING DODGER
     if keyboard.is_pressed('3'):
         if boosts.upper() == "YES":
             keypress("f1")
             keypress("f1")
             keypress("f3")
             keypress("f3")
-        while not keyboard.is_pressed('p'):
-            lightning_dodge()
-            if keyboard.is_pressed('q'):
-                quit()
+        lightning_dodge()
