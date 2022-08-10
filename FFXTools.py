@@ -40,13 +40,16 @@ def lightning_dodge():
 
 print("============================")
 print("FINAL FANTASTY X HD Tools v2")
-print("============================")
+print("============================\n")
+print("====== SETUP ======")
 print("Movement keys must be bound to WASD")
-print("Confirm, Menu, and Cancel mapped to C, V, X respectively\n")
+print("Confirm, Menu, and Cancel mapped to C, V, X respectively")
+print("Yuna must be in 8th party slot for Yuna Party Heals to function correctly\n")
+boosts = input("Do you want to have Boosts included in the script? (Type 'yes' or 'no'): ")
 
-print("Press '1' for Autobattler")
-print("Press '2' for Yuna Party Heal")
-print("Press '3' for Lightning Dodger\n")
+print("Press '1' to start Autobattler")
+print("Press '2' to start Yuna Party Heal")
+print("Press '3' to start  Lightning Dodger\n")
 print("Press 'P' to Pause.")
 print("Press 'Q' to Quit Program.")
 
@@ -56,18 +59,20 @@ while not keyboard.is_pressed('q'):
         quit()
 # AUTOBATTLER
     if keyboard.is_pressed('1'):
-        keypress("f1")
-        keypress("f1")
-        keypress("f2")
-        keypress("f3")
-        keypress("f4")
+        if boosts.upper == "YES":
+            keypress("f1")
+            keypress("f1")
+            keypress("f2")
+            keypress("f3")
+            keypress("f4")
         while not keyboard.is_pressed('p'):
             if keyboard.is_pressed('q'):
-                keypress("f1")
-                keypress("f2")
-                keypress("f3")
-                keypress("f3")
-                keypress("f4")
+                if boosts.upper == "YES":
+                    keypress("f1")
+                    keypress("f2")
+                    keypress("f3")
+                    keypress("f3")
+                    keypress("f4")
                 quit()
             keyboard.press('c')
             keyboard.press('d')
@@ -91,11 +96,13 @@ while not keyboard.is_pressed('q'):
             keypress("s")
         for back in range(3):
             keypress("x")
+# LIGHTNING DODGER
     if keyboard.is_pressed('3'):
-        keypress("f1")
-        keypress("f1")
-        keypress("f3")
-        keypress("f3")
+        if boosts.upper == "YES":
+            keypress("f1")
+            keypress("f1")
+            keypress("f3")
+            keypress("f3")
         while not keyboard.is_pressed('p'):
             lightning_dodge()
             if keyboard.is_pressed('q'):
