@@ -1,11 +1,7 @@
 FFX Tools
 
-GENERAL SETUP
-Movement keys must be bound to WASD
-Confirm, Menu, and Cancel mapped to C, V, X respectively
-
+Movement keys must be bound to WASD. Confirm, Menu, and Cancel mapped to C, V, X respectively
 You can use the 2nd Keyboard settings to set these if they're not your default.
-
 
 
 Autofarmer
@@ -15,9 +11,8 @@ Very simple script that moves Tidus around and holds Confirm in order to AFK far
 
 Yuna Party Heals
 SETUP: YUNA MUST BE IN 8TH PARTY SLOT
-Some people are less inclined to want to "cheat" but just automatically gaining HP indefinitely through the use of the supercharger boost.
-For those people, the Yuna Party Heals tool allows you to go from the regular game display in order to heal all 3 current party members.
-
+If you consider using the Supercharger boost cheating. This is for you.
+The Yuna Party Heals tool allows you to automatically heal all 3 current party members using Yuna's MP.
 
 Lightning Dodger
 Forked from: https://gist.github.com/fritz-c/f341a1b588564c0a73ffddd684151acf
