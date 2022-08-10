@@ -59,7 +59,7 @@ while not keyboard.is_pressed('q'):
         quit()
 # AUTOBATTLER
     if keyboard.is_pressed('1'):
-        if boosts.upper == "YES":
+        if boosts.upper() == "YES":
             keypress("f1")
             keypress("f1")
             keypress("f2")
@@ -98,7 +98,7 @@ while not keyboard.is_pressed('q'):
             keypress("x")
 # LIGHTNING DODGER
     if keyboard.is_pressed('3'):
-        if boosts.upper == "YES":
+        if boosts.upper() == "YES":
             keypress("f1")
             keypress("f1")
             keypress("f3")
